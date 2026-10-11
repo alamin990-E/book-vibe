@@ -1,5 +1,7 @@
 import BookCard from '@/components/shared/BookCard';
-import { IBook } from '@/type/booksType';
+
+
+import { IBook } from "@/type/booksType";
 import React from 'react';
 
 const getBooks = async () => {
@@ -8,9 +10,7 @@ const getBooks = async () => {
       `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`
     );
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch books data");
-    }
+   
 
     const data = await res.json();
     return data;
